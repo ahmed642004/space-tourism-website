@@ -1,0 +1,246 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./assets/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.logo {
+  background-image: url("./assets/shared/logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  margin-left: 55px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+.links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 830px;
+  /* height: 96px; */
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+}
+.links::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 473px;
+  background-color: #ffffff;
+  opacity: 0.25;
+  right: 95%;
+}
+.links ul {
+  display: flex;
+  counter-reset: name -1;
+  margin: 0;
+  padding: 0;
+}
+.links li {
+  position: relative;
+  list-style: none;
+  flex: 1;
+  margin-right: 48px;
+  height: 96px;
+  line-height: 96px;
+}
+.links li a::after {
+  transition: 0.3s;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  opacity: 0.5;
+  height: 3px;
+  width: 0px;
+}
+.links li a:hover::after {
+  width: 100%;
+}
+.links ul span {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+}
+.links li a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  color: #ffffff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2.7px;
+}
+.links li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff;
+  opacity: 1;
+  height: 3px;
+  width: 100%;
+}
+.container {
+  max-width: 1400px;
+  height: 75vh;
+  margin: 0 auto;
+}
+
+.text {
+  color: white;
+  align-self: center;
+}
+.text .text1 {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  color: #d0d6f9;
+  margin-bottom: 24px;
+}
+.text .text2 {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 150px;
+  margin-bottom: 24px;
+}
+.text .text3 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #d0d6f9;
+  max-width: 450px;
+  line-height: 32px;
+}
+.explore {
+  align-self: flex-end;
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  line-height: 274px;
+  transition: 0.3s;
+}
+.explore p {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.explore:hover {
+  outline: 100px solid #fff;
+  outline-color: rgba(255, 255, 255, 0.1);
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url("./assets/home/background-home-mobile.jpg");
+    z-index: -1;
+  }
+  .links::before {
+    display: none;
+  }
+  .links.show {
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    width: 254px;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: -998;
+  }
+  .links.show.rr {
+    opacity: 1;
+  }
+  .links ul {
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 112px;
+  }
+  .text .text1 {
+    font-size: 16px;
+  }
+  .text .text2 {
+    font-size: 80px;
+  }
+  .text .text3 {
+    font-size: 15px;
+    max-width: 300px;
+  }
+  .text {
+    flex: 1;
+    margin-top: 112px;
+  }
+  .box {
+    justify-content: flex-end;
+    text-align: center;
+    align-items: flex-end;
+    flex-direction: column;
+    height: calc(100vh - 72px);
+    z-index: -999;
+    position: relative;
+  }
+  .explore {
+    align-self: center;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 48px;
+    border-radius: 50%;
+  }
+  .explore p {
+    font-size: 15px;
+    line-height: 150px;
+  }
+  .logo {
+    margin-left: 24px;
+  }
+  .navbar {
+    padding-top: 24px;
+  }
+  .container {
+    max-width: 750px;
+  }
+  .burger {
+    background-image: url("./assets/shared/icon-hamburger.svg");
+    width: 24px;
+    height: 21px;
+    margin-right: 24px;
+  }
+  .cross {
+    background-image: url("./assets/shared/icon-close.svg");
+    width: 19px;
+    height: 19px;
+
+    margin-top: 32px;
+
+    align-self: flex-start;
+  }
+}
