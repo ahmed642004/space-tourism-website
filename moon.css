@@ -217,7 +217,7 @@ a {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 667px) {
+@media (max-width: 376px) {
   .info {
     margin: 0;
   }
