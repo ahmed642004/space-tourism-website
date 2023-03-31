@@ -1,0 +1,218 @@
+body {
+  background-image: url("./assets/destination/background-destination-desktop.jpg");
+}
+a {
+  display: block;
+  text-decoration: none;
+  margin: auto;
+}
+.header {
+  display: flex;
+}
+.heading {
+  color: #ffffff;
+  margin-top: 123px;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 4.725px;
+  text-transform: uppercase;
+}
+.container {
+  height: 0;
+}
+.destination {
+  display: flex;
+}
+.planet {
+  
+  flex: 1;
+  margin-top: 97px;
+  
+
+}
+.planet .image {
+  max-width: 100%;  
+  animation: spin 15s linear infinite;
+}
+.discription {
+  flex: 1;
+}
+.planets {
+  display: flex;
+}
+.planets li {
+  margin-right: 35px;
+}
+.planets li a {
+  position: relative;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  margin-top: 64px;
+  padding-bottom: 10px;
+}
+.planets li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+.planets li a.active::before {
+  width: 100%;
+}
+.planets li a:hover::before {
+  width: 100%;
+}
+.paragraph {
+  max-width: 445px;
+}
+.paragraph .head {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  color: #ffffff;
+  margin-top: 37px;
+}
+
+.paragraph .text {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #d0d6f9;
+  line-height: 32px;
+}
+.info {
+  display: flex;
+  margin-top: 20px;
+  border-top: 1px solid #383b4b;
+  max-width: 445px;
+}
+.info span {
+  display: block;
+}
+.dist .distance {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+.dist .travel {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.time .est {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+.time {
+  margin-left: 79px;
+}
+.time .days {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url("./assets/destination/background-destination-mobile.jpg") !important;
+  }
+  .planet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+  }
+  .planet .image {
+    width: 170px;
+    height: 170px;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .heading {
+    font-size: 16px;
+    margin-top: 13px;
+  }
+  .destination {
+    flex-direction: column;
+  }
+  .discription {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .planets {
+    display: flex;
+    flex-direction: row;
+  }
+  .planets li a {
+    margin-top: 26px;
+  }
+  .paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 327px;
+    text-align: center;
+  }
+  .paragraph .head {
+    font-size: 56px;
+    margin-top: 20px;
+  }
+  .paragraph .text {
+    margin: 0;
+    font-size: 15px;
+  }
+  .info {
+    justify-content: center;
+    align-items: center;
+    min-width: 85%;
+    margin-top: 40px;
+  }
+  .info .time {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 992px){
+  body{
+    background-image: url("./assets/destination/background-destination-tablet.jpg") !important;
+  }
+}
+@keyframes spin{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}

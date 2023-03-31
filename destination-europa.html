@@ -1,38 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Europa
-
-  The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-  winter lover’s dream. With an icy surface, it’s perfect for a bit of 
-  ice skating, curling, hockey, or simple relaxation in your snug 
-  wintery cabin.
-
-  Avg. distance
-  628 mil. km
-
-  Est. travel time
-  3 years
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./earth.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./moon.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"></div>
+        <div class="menu">
+          <div class="burger"></div>
+          <ul class="link">
+            <li>
+              <a href="index.html"><span>00</span>HOME</a>
+            </li>
+            <li>
+              <a href="destination-europa.html" class="active"
+                ><span>01</span>DESTINATION</a
+              >
+            </li>
+            <li>
+              <a href="crew-commander.html"><span>02</span>CREW</a>
+            </li>
+            <li>
+              <a href="#"><span>03</span>TECHNOLOGY</a>
+            </li>
+            <div class="cross"></div>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="header">
+        <h2 class="heading">Pick Your Destination</h2>
+      </div>
+      <div class="destination">
+        <div class="planet">
+          <img class="image" src="./assets/destination/image-moon.png" alt="" />
+        </div>
+        <div class="discription">
+          <ul class="planets">
+            <li class="moon">
+              <a href="#" class="active" data-id="0">MOON</a>
+            </li>
+            <li class="mars"><a href="#" data-id="1">MARS</a></li>
+            <li class="europa"><a href="#" data-id="2">EUROPA</a></li>
+            <li class="titan"><a href="#" data-id="3">TITAN</a></li>
+          </ul>
+          <div class="paragraph">
+            <h1 class="head">Moon</h1>
+            <p class="text">
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+          </div>
+          <div class="info">
+            <div class="dist">
+              <span class="distance">AVG. DISTANCE</span>
+              <span class="travel">384,400KM</span>
+            </div>
+            <div class="time">
+              <span class="est">EST. TRAVEL TIME</span>
+              <span class="days">3 DAYS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
 </html>
