@@ -26,14 +26,11 @@ a {
   display: flex;
 }
 .planet {
-  
   flex: 1;
   margin-top: 97px;
-  
-
 }
 .planet .image {
-  max-width: 100%;  
+  max-width: 100%;
   animation: spin 15s linear infinite;
 }
 .discription {
@@ -207,12 +204,27 @@ a {
     margin-left: 50px;
   }
 }
-@media (max-width: 992px){
-  body{
+@media (max-width: 992px) {
+  body {
     background-image: url("./assets/destination/background-destination-tablet.jpg") !important;
   }
 }
-@keyframes spin{
-  from{transform: rotate(0deg);}
-  to{transform: rotate(360deg);}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 667px) {
+  .info {
+    margin: 0;
+  }
+  .planet {
+    margin-top: 15px;
+  }
+  .planets li a {
+    margin-top: 10px;
+  }
 }
