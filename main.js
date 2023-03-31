@@ -61,7 +61,9 @@ function getData(json) {
     });
   });
 }
-
+function redirect() {
+  window.location.href = "destination-europa.html";
+}
 function getName(name) {
   ul.addEventListener("click", function (e) {
     name = e.target.innerHTML;
