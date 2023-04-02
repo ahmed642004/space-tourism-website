@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./earth.css" />
+    <link rel="stylesheet" href="./moon.css" />
+    <link rel="stylesheet" href="./technology.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"></div>
+        <div class="menu">
+          <div class="burger"></div>
+          <ul class="link">
+            <li>
+              <a href="index.html" class="active"><span>00</span>HOME</a>
+            </li>
+            <li>
+              <a href="destination-europa.html"><span>01</span>DESTINATION</a>
+            </li>
+            <li>
+              <a href="crew-commander.html"><span>02</span>CREW</a>
+            </li>
+            <li>
+              <a href="technology.html"><span>03</span>TECHNOLOGY</a>
+            </li>
+            <div class="cross"></div>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <h2 class="heading">space launch 101</h2>
+      <div class="data active" id="one">
+        <ul class="numbers">
+          <li class="one active" data-id="0">1</li>
+          <li class="two" data-id="1">2</li>
+          <li class="three" data-id="2">3</li>
+        </ul>
+        <div class="text">
+          <h3 >THE TERMINOLOGY...</h3>
+          <h2 class="h2">LAUNCH VEHICLE</h2>
+          <p class="p">
+            A launch vehicle or carrier rocket is a rocket-propelled vehicle
+            used to carry a payload from Earth's surface to space, usually to
+            Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful
+            in operation. Standing 150 metres tall, it's quite an awe-inspiring
+            sight on the launch pad!
+          </p>
+        </div>
+        <div class="image" >
+          <img 
+            
+            alt=""
+            id="image"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      let image = document.getElementById("image")
+      if (window.matchMedia("(max-width: 768px)").matches){
+  image.src = "./assets/technology/image-launch-vehicle-landscape.jpg"
+}else{
+  image.src = "./assets/technology/image-launch-vehicle-portrait.jpg"
+}
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

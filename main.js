@@ -12,9 +12,15 @@ let travel = document.querySelector(".info .dist .travel");
 let planet = document.querySelector(".planet");
 let time = document.querySelector(".time .days");
 let photo = document.querySelector(".image");
+const liElements = document.querySelectorAll(".numbers li");
+let launch = document.querySelector(".text .h2");
+let p = document.querySelector(".text .p");
+let immm = document.getElementById("image");
 burger.addEventListener("click", function () {
   links.classList.add("show");
 });
+
+
 document.addEventListener("click", function (event) {
   var isClickInsideMenu = menu.contains(event.target);
   if (!isClickInsideMenu) {
@@ -60,7 +66,36 @@ function getData(json) {
       photo.setAttribute("src", `${image}`);
     });
   });
+  liElements.forEach((li) => {
+    li.addEventListener("click", (e) => {
+      liElements.forEach((el) => {
+        el.classList.remove("active");
+      });
+      e.target.classList.add("active");
+      launch.innerHTML = "";
+      p.innerHTML = "";
+      
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        let image = json.technology[e.target.dataset.id].images.landscape;
+        let head = json.technology[e.target.dataset.id].name;
+        let text = json.technology[e.target.dataset.id].description;
+        launch.innerHTML = head;
+        p.innerHTML = text;
+        immm.setAttribute("src", `${image}`);
+      } else {        
+        let image = json.technology[e.target.dataset.id].images.portrait;
+        let head = json.technology[e.target.dataset.id].name;
+        let text = json.technology[e.target.dataset.id].description;
+        launch.innerHTML = head;
+        p.innerHTML = text;
+        immm.setAttribute("src", `${image}`);
+      }
+    });
+  });
 }
+const lis = document.querySelectorAll(".numbers li");
+const datas = document.querySelectorAll(".data");
+
 function redirect() {
   window.location.href = "destination-europa.html";
 }
