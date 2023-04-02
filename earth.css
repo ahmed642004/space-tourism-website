@@ -54,7 +54,8 @@ ul.link {
   padding: 0;
   width: 830px;
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(40.7742px);
+  backdrop-filter: blur(40px) contrast(90%);
+  -webkit-backdrop-filter: blur(40px) contrast(90%);
 }
 .link li {
   position: relative;
@@ -257,7 +258,8 @@ ul.link {
     top: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(40.7742px);
+    backdrop-filter: blur(50px) contrast(90%);
+    -webkit-backdrop-filter: blur(2px) contrast(90%);
     height: 100vh;
     display: flex;
     justify-content: center;
